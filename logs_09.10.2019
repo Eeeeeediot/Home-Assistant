@@ -1,0 +1,1094 @@
+2019-10-09 07:52:02 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for zigbee2mqtt_networkmap which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-10-09 07:52:02 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for audiconnect which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-10-09 07:52:02 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for alexa_media which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-10-09 07:52:02 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for hacs which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-10-09 07:53:10 ERROR (MainThread) [custom_components.audiconnect.audi_connect_account] API error: {'errorCode': 'gw.error.timeout', 'description': 'Backend Connection Timeout'}
+2019-10-09 07:53:14 WARNING (MainThread) [homeassistant.setup] Setup of person is taking over 10 seconds.
+2019-10-09 07:53:14 WARNING (MainThread) [homeassistant.setup] Setup of input_select is taking over 10 seconds.
+2019-10-09 07:53:14 WARNING (MainThread) [homeassistant.setup] Setup of group is taking over 10 seconds.
+2019-10-09 07:53:14 WARNING (MainThread) [homeassistant.setup] Setup of input_number is taking over 10 seconds.
+2019-10-09 07:53:16 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for rpi_power which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-10-09 07:53:18 WARNING (MainThread) [homeassistant.loader] You are using a custom integration for xboxone which has not been tested by Home Assistant. This component might cause stability problems, be sure to disable it if you do experience issues with Home Assistant.
+2019-10-09 07:53:42 WARNING (MainThread) [homeassistant.components.switch] Setup of platform alexa_media is taking over 10 seconds.
+2019-10-09 07:53:42 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform alexa_media is taking over 10 seconds.
+2019-10-09 07:54:00 ERROR (MainThread) [hacs.repository.integration.danobot.entity-controller] Missing manifest file.
+2019-10-09 07:54:00 ERROR (MainThread) [hacs] Validation for danobot/entity-controller failed.
+2019-10-09 07:55:23 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 07:55:23 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 07:57:28 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 07:58:35 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 418, in start
+    resp = await task
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_app.py", line 458, in _handle
+    resp = await handler(request)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_middlewares.py", line 119, in impl
+    return await handler(request)
+  File "/usr/src/homeassistant/homeassistant/components/http/real_ip.py", line 40, in real_ip_middleware
+    return await handler(request)
+  File "/usr/src/homeassistant/homeassistant/components/http/ban.py", line 73, in ban_middleware
+    return await handler(request)
+  File "/usr/src/homeassistant/homeassistant/components/http/auth.py", line 231, in auth_middleware
+    return await handler(request)
+  File "/usr/src/homeassistant/homeassistant/components/http/view.py", line 128, in handle
+    result = await result
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/http.py", line 37, in get
+    return await WebSocketHandler(request.app["hass"], request).async_handle()
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/http.py", line 199, in async_handle
+    await self._writer_task
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/http.py", line 66, in _writer
+    await self.wsock.send_json(message, dumps=JSON_DUMP)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_ws.py", line 296, in send_json
+    await self.send_str(dumps(data), compress=compress)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_ws.py", line 283, in send_str
+    await self._writer.send(data, binary=False, compress=compress)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/http_websocket.py", line 643, in send
+    await self._send_frame(message, WSMsgType.TEXT, compress)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/http_websocket.py", line 620, in _send_frame
+    await self.protocol._drain_helper()
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/base_protocol.py", line 81, in _drain_helper
+    await waiter
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 883, in _write_ready
+    n = self._sock.send(self._buffer)
+BrokenPipeError: [Errno 32] Broken pipe
+2019-10-09 07:58:35 ERROR (MainThread) [aiohttp.server] Unhandled exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 447, in start
+    await resp.prepare(request)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_response.py", line 353, in prepare
+    return await self._start(request)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_response.py", line 667, in _start
+    return await super()._start(request)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_response.py", line 410, in _start
+    await writer.write_headers(status_line, headers)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/http_writer.py", line 112, in write_headers
+    self._write(buf)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/http_writer.py", line 67, in _write
+    raise ConnectionResetError('Cannot write to closing transport')
+ConnectionResetError: Cannot write to closing transport
+2019-10-09 07:59:32 ERROR (MainThread) [custom_components.audiconnect.audi_connect_account] Expecting value: line 1 column 1 (char 0)
+2019-10-09 07:59:32 ERROR (SyncWorker_14) [custom_components.xboxone.media_player] Failed to poweroff FD00D646FE13B16F
+2019-10-09 08:09:53 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 08:11:58 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 08:14:04 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 08:20:34 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 08:20:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 08:20:34 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 08:20:34 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 08:23:02 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 08:25:06 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 08:28:37 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 08:28:38 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 08:30:08 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 08:32:42 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 08:32:42 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 08:32:42 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 08:32:42 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 08:34:12 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 08:37:28 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 08:40:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 08:40:00 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 08:41:30 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 08:42:29 ERROR (MainThread) [custom_components.audiconnect.audi_connect_account] API error: {'errorCode': 'gw.error.unknown', 'description': 'Invalid backend error'}
+2019-10-09 08:42:32 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 08:42:32 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 08:42:32 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 08:42:32 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 08:45:37 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 08:45:37 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 08:47:07 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 08:48:12 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 08:53:26 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 08:54:56 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 08:55:31 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 08:57:36 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:04:48 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 09:04:49 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:08:13 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:09:43 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 09:10:16 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:15:24 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:16:54 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 09:17:28 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:19:32 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:21:36 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:23:41 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:25:46 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:32:14 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 09:32:14 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:32:14 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 09:32:14 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 09:35:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 09:35:28 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:35:28 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 09:35:28 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 09:36:58 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 09:37:03 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 09:37:03 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 09:37:33 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:41:44 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:43:45 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:46:31 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 09:46:31 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:49:30 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 09:49:31 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:49:31 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 09:49:31 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 09:51:37 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:54:51 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 09:54:51 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 09:54:52 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 09:54:52 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 09:56:22 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 09:58:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:01:20 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 10:01:21 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:02:51 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 10:03:26 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:03:26 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 10:05:30 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:09:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 10:09:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:09:10 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 10:10:40 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 10:11:24 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 10:11:24 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 10:11:24 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:11:24 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 10:18:39 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 10:18:39 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:20:09 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 10:21:07 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:21:08 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 10:24:37 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 10:24:37 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:24:37 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 10:24:37 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 10:26:07 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 10:26:47 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 10:26:47 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:26:48 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 10:26:48 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 10:32:31 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 10:32:31 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 10:33:53 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 10:34:29 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:36:30 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:38:35 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:41:45 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 10:41:45 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:43:15 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 10:50:14 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 10:50:14 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:50:14 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 10:50:14 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 10:52:39 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 10:52:39 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 10:52:39 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 10:52:39 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 10:54:44 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:02:36 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 11:02:36 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:02:36 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 11:02:36 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 11:04:45 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:04:48 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 11:08:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 11:08:12 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:09:42 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 11:11:19 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 11:11:19 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:11:19 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 11:11:19 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 11:13:23 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:16:59 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 11:16:59 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:17:09 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 11:17:09 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 11:18:29 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 11:19:04 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:21:09 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:23:14 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:25:31 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 11:25:32 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:25:32 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 11:25:32 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 11:27:43 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:29:49 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:31:58 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:34:05 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:35:43 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 11:35:44 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 11:35:44 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 11:35:44 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 11:36:37 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 11:36:37 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:39:42 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 11:39:43 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:39:43 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 11:39:43 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 11:41:46 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 11:41:49 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:47:02 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 11:47:03 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:48:33 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 11:50:59 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:51:08 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 11:51:08 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 11:52:29 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 11:54:02 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 11:54:02 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 11:54:02 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:54:02 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 11:57:08 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 11:57:09 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 11:57:09 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 11:57:09 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 11:59:14 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:02:24 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 12:02:25 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:02:25 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 12:02:25 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 12:03:55 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 12:04:31 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:06:38 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:06:41 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 12:06:41 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 12:21:19 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 12:21:19 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:23:24 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:25:28 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:27:33 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:35:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 12:35:19 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:36:49 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 12:37:25 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:39:30 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:41:35 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:45:43 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:47:49 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:47:49 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 12:49:57 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:52:04 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:53:04 ERROR (MainThread) [metno] https://aa015h6buqvih86i1.api.met.no/weatherapi/locationforecast/1.9/ returned Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:None [No such file or directory]
+2019-10-09 12:53:04 ERROR (MainThread) [homeassistant.components.met.weather] Retrying in 20 minutes
+2019-10-09 12:54:24 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 12:54:24 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:54:24 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 12:54:24 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 12:56:39 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 12:56:39 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:56:40 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 12:56:40 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 12:59:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 12:59:00 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 12:59:00 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 12:59:00 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 12:59:00 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 13:03:02 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 13:03:03 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:03:03 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 13:03:03 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 13:04:33 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 13:05:08 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:09:34 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 13:09:37 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:13:43 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:16:47 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 13:16:48 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:18:18 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 13:18:52 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 13:18:54 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:25:08 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:28:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 13:28:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 13:28:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.bedroom_tv is taking over 10 seconds
+2019-10-09 13:28:28 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:28:28 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 13:28:28 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 13:29:58 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 13:30:33 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:32:38 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:34:42 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:36:53 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 13:38:50 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 13:40:57 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:42:59 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:46:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 13:46:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 13:46:03 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 13:46:03 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:47:33 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 13:48:08 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:50:14 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:52:22 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:54:40 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 13:54:41 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:54:41 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 13:54:41 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 13:57:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 13:57:10 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 13:59:15 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:01:29 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 14:01:29 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:07:42 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:09:48 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:11:52 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 14:11:53 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:15:07 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:15:16 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 14:15:16 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 14:16:37 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 14:18:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 14:18:18 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:18:18 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 14:18:18 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 14:21:25 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:21:25 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 14:23:31 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:25:39 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:27:44 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:30:49 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 14:30:50 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:32:20 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 14:32:53 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 14:32:56 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:34:57 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:45:20 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 14:45:20 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 14:45:43 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 14:46:39 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 14:47:14 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:49:21 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:51:28 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:53:33 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:55:47 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 14:55:47 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 14:55:47 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 14:55:48 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:57:55 ERROR (MainThread) [custom_components.audiconnect.audi_connect_account] API error: {'errorCode': 'TSS.technical.9027', 'description': 'Technical Error'}
+2019-10-09 14:57:57 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 14:57:57 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 14:57:59 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 14:57:59 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:00:05 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:02:36 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 15:02:36 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:02:36 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:02:36 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:05:35 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 15:05:35 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:05:35 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:05:35 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:05:46 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 15:05:46 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 15:07:05 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 15:08:52 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 15:08:53 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:08:53 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:08:53 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:10:23 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 15:11:06 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:13:13 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:15:18 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:17:23 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:19:28 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:23:01 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 15:23:02 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:24:32 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 15:26:57 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 15:26:58 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:28:28 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 15:29:10 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 15:29:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:32:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 15:32:05 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:32:05 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:32:05 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:33:35 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 15:34:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:37:14 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 15:37:14 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:37:14 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:37:14 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:37:22 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 15:37:22 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 15:38:44 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 15:39:23 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:39:26 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:39:26 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:41:29 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:43:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:45:41 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:47:52 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 15:47:52 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:47:52 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:47:52 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:50:01 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 15:50:01 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:50:04 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:51:37 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 15:52:08 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:55:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 15:55:22 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:55:22 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:55:22 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 15:56:52 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 15:57:27 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 15:57:27 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 15:59:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:01:56 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 16:01:56 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:04:03 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:06:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:10:58 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 16:10:58 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 16:12:18 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 16:14:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 16:14:04 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:14:04 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 16:14:04 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 16:16:30 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 16:16:30 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:16:30 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 16:16:30 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 16:20:30 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 16:20:31 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:20:31 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 16:20:31 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 16:22:01 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 16:22:40 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:23:59 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 16:24:49 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 16:24:49 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:24:52 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 16:24:52 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 16:27:54 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 16:27:54 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:28:05 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 16:28:05 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 16:29:24 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 16:29:58 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:33:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 16:33:04 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:34:34 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 16:35:08 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:35:08 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 16:37:15 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:39:21 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:41:26 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:43:31 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:45:37 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:45:37 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 16:45:39 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 16:47:46 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 16:47:46 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:47:46 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 16:49:53 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:52:58 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 16:52:59 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:52:59 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 16:52:59 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 16:52:59 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 16:55:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 16:55:11 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:55:11 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 16:57:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 16:57:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 16:57:33 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 16:57:34 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:00:11 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 17:00:11 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:00:11 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:00:11 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:02:34 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 17:02:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:02:34 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:02:34 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:05:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 17:05:05 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:05:05 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:05:05 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:08:09 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:09:39 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 17:10:21 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 17:10:21 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:10:21 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:10:21 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:12:25 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:16:36 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:20:43 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:22:51 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:25:15 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 17:25:15 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:25:15 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:25:15 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:28:42 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 17:28:43 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:28:43 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:28:43 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:30:13 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 17:30:48 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:34:08 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 17:34:09 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:34:17 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 17:34:17 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 17:34:27 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 17:34:27 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 17:35:39 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 17:36:36 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:36:36 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 17:38:29 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 17:38:42 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:40:56 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 17:40:56 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:40:56 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:40:56 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:43:02 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:45:07 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:47:15 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:49:35 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 17:49:35 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 17:49:36 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:49:36 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:51:42 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:51:42 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 17:53:53 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 17:53:53 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 17:53:53 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.shield is taking over 10 seconds
+2019-10-09 17:53:53 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:53:53 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:53:53 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 17:56:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 17:56:03 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 17:56:04 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:56:04 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 17:58:17 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 17:58:17 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:01:35 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 18:01:36 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:01:36 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 18:01:36 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 18:03:06 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 18:04:16 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:04:16 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 18:07:01 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:08:31 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 18:11:11 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:13:12 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:15:17 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:17:50 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 18:17:50 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:23:30 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:23:30 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 18:25:00 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 18:25:40 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:29:06 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 18:29:07 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:29:07 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 18:29:07 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 18:29:17 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 18:29:17 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 18:30:37 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 18:31:24 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 18:31:24 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:33:28 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:36:41 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 18:36:42 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:36:50 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 18:36:50 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 18:38:12 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 18:40:12 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 18:40:12 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:41:42 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 18:46:24 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:50:35 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:54:43 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:56:52 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 18:56:52 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 18:56:55 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 18:56:55 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 18:59:03 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 18:59:03 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:01:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:03:07 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 19:05:17 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:05:17 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 19:08:36 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 19:12:53 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 19:12:54 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:12:54 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 19:12:54 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 19:14:24 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 19:16:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:16:10 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 19:18:19 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 19:18:19 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:18:21 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 19:18:21 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 19:20:24 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:22:28 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:24:33 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:26:38 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:28:43 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:30:49 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:32:56 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:35:06 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 19:35:07 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:35:07 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 19:35:07 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 19:37:19 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 19:37:19 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:37:19 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 19:37:19 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 19:37:19 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 19:41:05 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 19:41:05 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:41:05 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 19:41:05 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 19:41:14 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 19:41:14 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 19:42:35 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 19:45:02 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 275, in data_received
+    messages, upgraded, tail = self._request_parser.feed_data(data)
+  File "aiohttp\_http_parser.pyx", line 523, in aiohttp._http_parser.HttpParser.feed_data
+aiohttp.http_exceptions.BadStatusLine: invalid HTTP method
+2019-10-09 19:45:12 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 19:45:15 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:48:16 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 19:48:16 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:49:46 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 19:50:20 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:52:28 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:54:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 19:55:04 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 418, in start
+    resp = await task
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_app.py", line 458, in _handle
+    resp = await handler(request)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_middlewares.py", line 119, in impl
+    return await handler(request)
+  File "/usr/src/homeassistant/homeassistant/components/http/real_ip.py", line 40, in real_ip_middleware
+    return await handler(request)
+  File "/usr/src/homeassistant/homeassistant/components/http/ban.py", line 73, in ban_middleware
+    return await handler(request)
+  File "/usr/src/homeassistant/homeassistant/components/http/auth.py", line 231, in auth_middleware
+    return await handler(request)
+  File "/usr/src/homeassistant/homeassistant/components/http/view.py", line 128, in handle
+    result = await result
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/http.py", line 37, in get
+    return await WebSocketHandler(request.app["hass"], request).async_handle()
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/http.py", line 199, in async_handle
+    await self._writer_task
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/http.py", line 66, in _writer
+    await self.wsock.send_json(message, dumps=JSON_DUMP)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_ws.py", line 296, in send_json
+    await self.send_str(dumps(data), compress=compress)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_ws.py", line 283, in send_str
+    await self._writer.send(data, binary=False, compress=compress)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/http_websocket.py", line 643, in send
+    await self._send_frame(message, WSMsgType.TEXT, compress)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/http_websocket.py", line 620, in _send_frame
+    await self.protocol._drain_helper()
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/base_protocol.py", line 81, in _drain_helper
+    await waiter
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 883, in _write_ready
+    n = self._sock.send(self._buffer)
+BrokenPipeError: [Errno 32] Broken pipe
+2019-10-09 19:55:04 ERROR (MainThread) [aiohttp.server] Unhandled exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 447, in start
+    await resp.prepare(request)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_response.py", line 353, in prepare
+    return await self._start(request)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_response.py", line 667, in _start
+    return await super()._start(request)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_response.py", line 410, in _start
+    await writer.write_headers(status_line, headers)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/http_writer.py", line 112, in write_headers
+    self._write(buf)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/http_writer.py", line 67, in _write
+    raise ConnectionResetError('Cannot write to closing transport')
+ConnectionResetError: Cannot write to closing transport
+2019-10-09 20:00:47 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:02:55 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:05:15 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 20:05:15 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 20:05:15 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:05:15 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 20:08:22 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 20:08:22 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:08:22 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 20:08:22 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 20:13:29 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 20:13:29 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 20:13:29 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 20:13:29 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:14:59 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 20:15:33 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:15:53 ERROR (MainThread) [aiohttp.server] Error handling request
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 418, in start
+    resp = await task
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_app.py", line 458, in _handle
+    resp = await handler(request)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_middlewares.py", line 119, in impl
+    return await handler(request)
+  File "/usr/src/homeassistant/homeassistant/components/http/real_ip.py", line 40, in real_ip_middleware
+    return await handler(request)
+  File "/usr/src/homeassistant/homeassistant/components/http/ban.py", line 73, in ban_middleware
+    return await handler(request)
+  File "/usr/src/homeassistant/homeassistant/components/http/auth.py", line 231, in auth_middleware
+    return await handler(request)
+  File "/usr/src/homeassistant/homeassistant/components/http/view.py", line 128, in handle
+    result = await result
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/http.py", line 37, in get
+    return await WebSocketHandler(request.app["hass"], request).async_handle()
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/http.py", line 199, in async_handle
+    await self._writer_task
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/http.py", line 66, in _writer
+    await self.wsock.send_json(message, dumps=JSON_DUMP)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_ws.py", line 296, in send_json
+    await self.send_str(dumps(data), compress=compress)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_ws.py", line 283, in send_str
+    await self._writer.send(data, binary=False, compress=compress)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/http_websocket.py", line 643, in send
+    await self._send_frame(message, WSMsgType.TEXT, compress)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/http_websocket.py", line 620, in _send_frame
+    await self.protocol._drain_helper()
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/base_protocol.py", line 81, in _drain_helper
+    await waiter
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 883, in _write_ready
+    n = self._sock.send(self._buffer)
+BrokenPipeError: [Errno 32] Broken pipe
+2019-10-09 20:15:53 ERROR (MainThread) [aiohttp.server] Unhandled exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_protocol.py", line 447, in start
+    await resp.prepare(request)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_response.py", line 353, in prepare
+    return await self._start(request)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_response.py", line 667, in _start
+    return await super()._start(request)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/web_response.py", line 410, in _start
+    await writer.write_headers(status_line, headers)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/http_writer.py", line 112, in write_headers
+    self._write(buf)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/http_writer.py", line 67, in _write
+    raise ConnectionResetError('Cannot write to closing transport')
+ConnectionResetError: Cannot write to closing transport
+2019-10-09 20:17:37 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:21:44 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:21:44 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 20:23:49 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:27:58 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 20:28:00 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:30:05 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:32:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:34:10 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:36:16 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:40:27 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:44:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:48:44 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:53:04 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 20:53:04 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:53:06 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 20:53:06 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 20:56:08 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 20:56:08 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:57:38 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 20:58:52 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 20:58:52 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 20:58:52 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 20:58:52 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:02:05 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 21:02:05 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:02:05 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:02:05 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:03:35 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 21:05:13 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 21:05:13 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:05:13 WARNING (MainThread) [homeassistant.components.sensor] Updating command_line sensor took longer than the scheduled update interval 0:01:00
+2019-10-09 21:05:13 WARNING (MainThread) [homeassistant.components.water_heater] Updating hive water_heater took longer than the scheduled update interval 0:01:00
+2019-10-09 21:05:13 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:05:13 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:06:43 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 21:08:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 21:08:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 21:08:00 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:08:00 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:10:03 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:10:03 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 21:16:33 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 21:16:34 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:16:34 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 21:18:48 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 21:18:48 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:18:48 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:18:48 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:21:09 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 21:21:09 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 21:21:09 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:21:09 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:23:13 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:27:24 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:29:29 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:33:00 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 21:33:00 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:34:30 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 21:39:11 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:41:17 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:44:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 21:44:28 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 21:44:28 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:44:28 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:46:47 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 21:46:47 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:46:47 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:46:47 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:49:55 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 21:49:55 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:49:55 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:49:55 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:51:25 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 21:52:26 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 21:52:26 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:52:26 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:52:26 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:55:30 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 21:55:30 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:55:31 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:55:31 WARNING (MainThread) [homeassistant.components.media_player] Updating webostv media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:55:40 ERROR (MainThread) [snitun.client.client_peer] Can't connect to SniTun server eu-central-1.ui.nabu.casa:443
+2019-10-09 21:55:40 ERROR (MainThread) [hass_nabucasa.remote] Connection problem to snitun server
+2019-10-09 21:57:00 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 21:58:35 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 21:58:35 WARNING (MainThread) [homeassistant.helpers.entity] Update of media_player.xbox_one is taking over 10 seconds
+2019-10-09 21:58:35 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 21:58:35 WARNING (MainThread) [homeassistant.components.media_player] Updating xboxone media_player took longer than the scheduled update interval 0:00:10
+2019-10-09 21:58:48 ERROR (MainThread) [homeassistant.components.automation] Error while executing automation automation.april_changed. Unknown error for call_service at pos 2: 
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 469, in _sock_connect
+    sock.connect(address)
+BlockingIOError: [Errno 115] Operation in progress
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
+    await self._loop.create_connection(*args, **kwargs))
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 954, in create_connection
+    raise exceptions[0]
+  File "/usr/local/lib/python3.7/asyncio/base_events.py", line 941, in create_connection
+    await self.sock_connect(sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 463, in sock_connect
+    self._sock_connect(fut, sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 477, in _sock_connect
+    self.add_writer(fd, self._sock_connect_cb, fut, sock, address)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 334, in add_writer
+    return self._add_writer(fd, callback, *args)
+  File "/usr/local/lib/python3.7/asyncio/selector_events.py", line 294, in _add_writer
+    (reader, handle))
+  File "/usr/local/lib/python3.7/selectors.py", line 389, in modify
+    self._selector.modify(key.fd, selector_events)
+FileNotFoundError: [Errno 2] No such file or directory
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/automation/__init__.py", line 434, in action
+    await script_obj.async_run(variables, context)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 162, in async_run
+    await self._handle_action(action, variables, context)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 246, in _handle_action
+    await self._actions[_determine_action(action)](action, variables, context)
+  File "/usr/src/homeassistant/homeassistant/helpers/script.py", line 329, in _async_call_service
+    context=context,
+  File "/usr/src/homeassistant/homeassistant/helpers/service.py", line 98, in async_call_from_config
+    domain, service_name, service_data, blocking=blocking, context=context
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1234, in async_call
+    await asyncio.shield(self._execute_service(handler, service_call))
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1259, in _execute_service
+    await handler.func(service_call)
+  File "/usr/src/homeassistant/homeassistant/components/notify/__init__.py", line 120, in async_notify_message
+    await notify_service.async_send_message(**kwargs)
+  File "/config/custom_components/alexa_media/notify.py", line 195, in async_send_message
+    else 'all'))
+  File "/config/custom_components/alexa_media/helpers.py", line 143, in wrapper
+    result = await func(*args, **kwargs)
+  File "/config/custom_components/alexa_media/media_player.py", line 767, in async_send_announcement
+    **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/alexapy/alexaapi.py", line 369, in send_announcement
+    target=target)
+  File "/usr/local/lib/python3.7/site-packages/alexapy/alexaapi.py", line 208, in send_sequence
+    data=data)
+  File "/usr/local/lib/python3.7/site-packages/alexapy/alexaapi.py", line 90, in _post_request
+    return await self._request('post', uri, data)
+  File "/usr/local/lib/python3.7/site-packages/alexapy/alexaapi.py", line 73, in _request
+    ssl=self._login._ssl)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
+    timeout=real_timeout
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
+    req, traces, timeout)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
+    raise last_exc
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
+    req=req, client_error=client_error)
+  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host alexa.amazon.co.uk:443 ssl:<ssl.SSLContext object at 0xb26fc4b0> [No such file or directory]
+2019-10-09 22:00:18 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.next_train_to_glc is taking over 10 seconds
+2019-10-09 22:00:38 WARNING (MainThread) [homeassistant.components.sensor] Updating uk_transport sensor took longer than the scheduled update interval 0:00:30
+2019-10-09 22:00:38 WARNING (MainThread) [homeassistant.components.media_player] Updating androidtv media_player took longer than the scheduled update interval 0:00:03
+2019-10-09 22:00:41 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 22:01:07 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.next_train_to_glc fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "/usr/local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 416, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1336, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 306, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 275, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/usr/local/lib/python3.7/site-packages/urllib3/util/retry.py", line 400, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.7/site-packages/urllib3/packages/six.py", line 734, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "/usr/local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 416, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.7/http/client.py", line 1336, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.7/http/client.py", line 306, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.7/http/client.py", line 275, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 261, in async_update_ha_state
+    await self.async_device_update()
+  File "/usr/src/homeassistant/homeassistant/helpers/entity.py", line 441, in async_device_update
+    await self.hass.async_add_executor_job(self.update)
+  File "/usr/local/lib/python3.7/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/homeassistant/homeassistant/util/__init__.py", line 240, in wrapper
+    result = method(*args, **kwargs)
+  File "/usr/src/homeassistant/homeassistant/components/uk_transport/sensor.py", line 240, in _update
+    self._do_api_request(params)
+  File "/usr/src/homeassistant/homeassistant/components/uk_transport/sensor.py", line 139, in _do_api_request
+    response = requests.get(self._url, params=request_params)
+  File "/usr/local/lib/python3.7/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2019-10-09 22:02:42 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 22:04:48 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 22:08:25 WARNING (MainThread) [homeassistant.helpers.entity] Update of binary_sensor.google_dns is taking over 10 seconds
+2019-10-09 22:08:26 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 22:09:56 ERROR (MainThread) [snitun.multiplexer.core] Ping fails, no response from peer
+2019-10-09 22:12:36 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
+2019-10-09 22:12:53 ERROR (SyncWorker_13) [homeassistant.components.androidtv.media_player] Failed to execute an ADB command. ADB connection re-establishing attempt in the next update. Error: ERROR: '' 
+2019-10-09 22:19:57 WARNING (MainThread) [homeassistant.components.binary_sensor] Updating ping binary_sensor took longer than the scheduled update interval 0:00:05
